@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+  xmlns:g="urn:import:com.google.gwt.user.client.ui">
+  <ui:with field="constants" type="tchat.com.client.TchatConstants"/>
+  <g:DockLayoutPanel unit='PX' width="100%" height="100%">
+       <g:east size="200">
+           <g:ListBox ui:field="nicknameList" width="200px" height="100%"/>
+       </g:east>
+       <g:south size="35">
+         <g:DockLayoutPanel unit='PX'>
+           <g:center>
+              <g:TextBox ui:field="newMessageBox" width="98%" height="23px" />
+           </g:center>
+           <g:east size="100">
+              <g:Button ui:field="newMessageButton" text="{constants.send}"/>
+           </g:east>
+         </g:DockLayoutPanel>
+       </g:south>
+      <g:center>
+         <g:ScrollPanel ui:field="scrollPanel" width="100%" height="100%">
+             <g:HTML ui:field="messagesBox"></g:HTML>
+         </g:ScrollPanel>
+       </g:center>
+  </g:DockLayoutPanel>
+</ui:UiBinder> 
